@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Carta interactiva con temática Hello Kitty">
+    <meta name="theme-color" content="#ffb3d9">
+    <title>💌 Carta Hello Kitty</title>
+    <link rel="stylesheet" href="./styles.scss">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Patrick+Hand&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Particles.js desde CDN -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Sobre -->
+        <div class="envelope" id="envelope">
+            <div class="envelope-back"></div>
+            <div class="envelope-front">
+                <div class="heart heart-1">❤️</div>
+                <div class="heart heart-2">💕</div>
+                <div class="heart heart-3">💖</div>
+                <!-- Hello Kitty SVG Profesional -->
+                <div class="hello-kitty-container">
+                    <svg class="hello-kitty-svg" viewBox="0 0 200 180" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Sombra -->
+                        <ellipse cx="100" cy="165" rx="60" ry="8" fill="rgba(0,0,0,0.1)"/>
+                        
+                        <!-- Oreja Izquierda -->
+                        <path d="M 50 60 Q 45 35 55 25 Q 60 20 65 25 Q 70 35 65 60 Z" fill="white" stroke="black" stroke-width="3"/>
+                        <ellipse cx="57" cy="45" rx="8" ry="12" fill="#ffb3d9"/>
+                        
+                        <!-- Oreja Derecha -->
+                        <path d="M 150 60 Q 155 35 145 25 Q 140 20 135 25 Q 130 35 135 60 Z" fill="white" stroke="black" stroke-width="3"/>
+                        <ellipse cx="143" cy="45" rx="8" ry="12" fill="#ffb3d9"/>
+                        
+                        <!-- Cabeza -->
+                        <ellipse cx="100" cy="90" rx="55" ry="50" fill="white" stroke="black" stroke-width="3"/>
+                        
+                        <!-- Moño Rojo (Lado derecho) -->
+                        <g transform="translate(135, 55)">
+                            <!-- Lazo izquierdo -->
+                            <ellipse cx="-10" cy="0" rx="12" ry="15" fill="#ff1744" stroke="black" stroke-width="2.5" transform="rotate(-45 -10 0)"/>
+                            <!-- Lazo derecho -->
+                            <ellipse cx="10" cy="0" rx="12" ry="15" fill="#ff1744" stroke="black" stroke-width="2.5" transform="rotate(45 10 0)"/>
+                            <!-- Centro del moño -->
+                            <circle cx="0" cy="0" r="8" fill="#ff1744" stroke="black" stroke-width="2.5"/>
+                            <!-- Cintas colgantes -->
+                            <path d="M -8 8 L -10 22 Q -10 26 -6 26 L -4 26 Q -2 26 -2 24 L 0 8" fill="#ff1744" stroke="black" stroke-width="2"/>
+                            <path d="M 8 8 L 10 22 Q 10 26 6 26 L 4 26 Q 2 26 2 24 L 0 8" fill="#ff1744" stroke="black" stroke-width="2"/>
+                        </g>
+                        
+                        <!-- Ojos -->
+                        <circle cx="75" cy="85" r="6" fill="black"/>
+                        <circle cx="125" cy="85" r="6" fill="black"/>
+                        
+                        <!-- Nariz -->
+                        <ellipse cx="100" cy="100" rx="8" ry="6" fill="#ffd700" stroke="black" stroke-width="2"/>
+                        <ellipse cx="98" cy="98" rx="3" ry="2" fill="white" opacity="0.8"/>
+                        
+                        <!-- Línea vertical bajo nariz -->
+                        <line x1="100" y1="106" x2="100" y2="116" stroke="black" stroke-width="2.5" stroke-linecap="round"/>
+                        
+                        <!-- Bigotes Izquierdos -->
+                        <line x1="55" y1="95" x2="30" y2="90" stroke="black" stroke-width="2.5" stroke-linecap="round"/>
+                        <line x1="55" y1="100" x2="28" y2="100" stroke="black" stroke-width="2.5" stroke-linecap="round"/>
+                        <line x1="55" y1="105" x2="30" y2="110" stroke="black" stroke-width="2.5" stroke-linecap="round"/>
+                        
+                        <!-- Bigotes Derechos -->
+                        <line x1="145" y1="95" x2="170" y2="90" stroke="black" stroke-width="2.5" stroke-linecap="round"/>
+                        <line x1="145" y1="100" x2="172" y2="100" stroke="black" stroke-width="2.5" stroke-linecap="round"/>
+                        <line x1="145" y1="105" x2="170" y2="110" stroke="black" stroke-width="2.5" stroke-linecap="round"/>
+                        
+                        <!-- Cuerpo/Vestido -->
+                        <rect x="70" y="135" width="60" height="35" rx="8" fill="#ff1744" stroke="black" stroke-width="3"/>
+                        
+                        <!-- Brazos -->
+                        <ellipse cx="60" cy="150" rx="15" ry="25" fill="white" stroke="black" stroke-width="3"/>
+                        <ellipse cx="140" cy="150" rx="15" ry="25" fill="white" stroke="black" stroke-width="3"/>
+                    </svg>
+                </div>
+                <p class="envelope-text">Click para abrir ✨</p>
+            </div>
+            <div class="envelope-flap"></div>
+        </div>
+
+        <!-- Carta -->
+        <div class="letter" id="letter">
+            <div class="letter-content">
+                <div class="letter-header">
+                    <div class="hello-kitty-stamp">
+                        <div class="stamp-kitty">
+                            <div class="stamp-face">
+                                <div class="stamp-ear stamp-ear-left"></div>
+                                <div class="stamp-ear stamp-ear-right"></div>
+                                <div class="stamp-eyes">
+                                    <span class="stamp-eye">•</span>
+                                    <span class="stamp-eye">•</span>
+                                </div>
+                                <div class="stamp-bow-mini"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="letter-body">
+                    <!-- ✨ ESCRIBE TU CONTENIDO AQUÍ ✨ -->
+                    <h1>¡Hola!</h1>
+                    
+                    <p>Aquí puedes escribir tu mensaje...</p>
+                    
+                    <p>Este es el espacio para tu carta especial.</p>
+                    
+                    <p>Puedes agregar todos los párrafos que desees.</p>
+                    
+                    <div class="signature">
+                        <p>Con cariño,</p>
+                        <p class="name">Tu nombre aquí</p>
+                    </div>
+                    <!-- ✨ FIN DEL CONTENIDO ✨ -->
+                </div>
+
+                <div class="letter-footer">
+                    <div class="decoration-hearts">
+                        <span>💗</span>
+                        <span>💖</span>
+                        <span>💗</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botón para cerrar la carta -->
+        <button class="close-button" id="closeButton">
+            <span>✕</span>
+        </button>
+    </div>
+
+    <!-- Particles JS para efectos de fondo -->
+    <div id="particles-js"></div>
+
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
